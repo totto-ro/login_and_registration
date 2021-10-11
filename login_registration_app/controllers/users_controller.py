@@ -14,7 +14,7 @@ def form():
 @app.route('/register', methods=["POST"])
 def save_user():
 
-    if not User.validate_user(request.form):
+    if not User.validate_register(request.form):
             return redirect('/')
     
     password = bcrypt.generate_password_hash(request.form['password'])
