@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1900px;
+    margin-bottom: 70px;
+}
+
+h1{
+    font-size: 70px;
+}
+
+h2{
+    font-size: 50px;
+    margin-bottom: 50px;
+    margin-right: 1600px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+table{
+    width: 1900px;
+}
+
+thead > tr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 40px;
+    margin: 0;
+    border-bottom: 5px solid black;
+}
+
+thead > tr >th{
+    flex: 1;
+}
+
+
+
+.b6 > a{
+    margin-left: 10px;
+}
+
+.b1{
+    flex: 1;
+    margin-left: 10px;
+}
+
+.b2{
+    flex: 1;
+}
+
+.b3{
+    flex: 1;
+}
+
+.b4{
+    flex: 1;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+tbody{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    margin-top: 20px;
+}
+
+
+tbody > tr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.addACar{
+    font-size: 35px;
+    padding: 20px;
+    background-color:lightseagreen;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 7px 7px rgb(0, 0, 0);
+    width: 250px;
+    margin-top: 50px;
+    margin-left: 1650px;
+}
+
+button > a{
+    text-decoration: none;
+    color: black;
+}
+
+.logout{
+    font-size: 35px;
+    background-color:tomato;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 7px 7px rgb(0, 0, 0);
+    width: 230px;
+    height: 80px;
+}
+
+
+button:hover{
+    cursor: pointer;
+    background-color:lightskyblue;
+    color: white;
+}
+
