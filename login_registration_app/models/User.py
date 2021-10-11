@@ -39,7 +39,7 @@ class User:
     # @classmethod
     # def get_by_id(cls,data):
     #     query = "SELECT * FROM users WHERE id = %(id)s;"
-    #     results = connectToMySQL(cls.db).query_db(query,data)
+    #     results = connectToMySQL('login_reg_db').query_db(query,data)
     #     return cls(results[0])
 
 
