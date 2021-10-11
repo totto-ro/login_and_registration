@@ -47,21 +47,21 @@ class User:
     def validate_register( user ):
         is_valid = True
         query = "SELECT * FROM users WHERE email = %(email)s;"
+        if len( connectToMySQL( 'login_reg_db' ).query_db( query,user )) > 0:
+            flash("Email already taken.", "register")
+            is_valid=False
         if not EMAIL_REGEX.match(user['email']): 
             flash("Invalid email address!", "register")
             is_valid = False
-        if len(user['first_name']) < 1:
-            flash("First Name must be at least 1 character.", "register")
+        if len(user['first_name']) < 3:
+            flash("First Name must be at least 3 character.", "register")
             is_valid = False
-        if len(user['last_name']) < 1:
-            flash("Last Name must be at least 1 character.", "register")
+        if len(user['last_name']) < 3:
+            flash("Last Name must be at least 3 character.", "register")
             is_valid = False
-        if len(user['password']) < 3:
+        if len(user['password']) < 5:
             flash("Password must be at least 3 characters.", "register")
             is_valid = False
-        if len( connectToMySQL( 'login_reg_db' ).query_db( query,user ))>0:
-            flash("This email is already registered in our database.", "register")
-            is_valid=False
         if user['password'] != user['confirm']:
             flash("Your confirm password doesn't match the password", "register")
             is_valid = False
