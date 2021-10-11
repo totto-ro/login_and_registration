@@ -27,6 +27,7 @@ def save_user():
     }
     User.save(data)
     session['email'] = data['email']
+    #return "hello"
     return redirect('/dashboard')            
 
 @app.route('/login', methods=["POST"])
@@ -62,7 +63,9 @@ def read():
     }
 
     result= User.user_by_email(data)
-    return render_template("read.html", user=result)
+    return render_template("dashboard.html", user=result)
+
+    
 
 @app.route("/logout")
 def clearsession():
