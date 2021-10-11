@@ -11,7 +11,7 @@
     <body>
         <main>
             <section class="leftSide">
-                <form class="newRegister" action="/users/register" method="POST">
+                <form class="newRegister" action="/register" method="POST">
                     <ul>
                     {% with messages = get_flashed_messages(category_filter=['register']) %}
                         {% if messages %} 
@@ -50,10 +50,10 @@
                             <input type="password" id="password" name="password" />
                         </li>
                         <li class="addInput">
-                            <label for="password">
+                            <label for="confirm">
                                 Confirm Password:
                             </label>
-                            <input type="password" id="password" name="password" />
+                            <input type="password" id="password" name="confirm" />
                         </li>
                         <li>
                             <button type="submit" value="Register">
